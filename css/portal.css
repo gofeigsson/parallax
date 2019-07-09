@@ -1,0 +1,213 @@
+/*incude padding and border in total dimensions, default m/p removed*/
+* { 
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+/*make images responsive*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+/*WRAP AROUND*/
+#wrapper {
+    height: 100vh;
+    width: 100vw;
+}
+/*MAIN DIV*/
+#screenone {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    background-color:  rgb(31, 245, 174);
+}
+/*LINKS*/
+.grid-item-1 {
+    grid-column: 6/9;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+/*IMAGE*/
+.grid-item-2 {
+    grid-column: 1/4;
+    grid-row: 1/9;
+    background-image: url("../images/gun2.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+/*HELLO*/
+.grid-item-3 {
+    grid-column: 2/6;
+    grid-row: 1/7;
+    text-align: right;
+    z-index: 4;
+    padding-top: 40px;
+    
+}
+/*BODY TEXT*/
+.grid-item-4 {
+    grid-column: 5/8;
+    grid-row: 3/9;
+    padding: 1em;
+    display: flex;
+    align-items: flex-end;
+    z-index: 3;
+    background-color:  rgba(157, 157, 157, 0.20);
+    color: white;
+    margin: 1em;
+}
+/*BACKGROUND FOR LINKS*/
+.grid-item-6 {
+    grid-column: 6/9;
+    grid-row: 1/5;
+    color: white;
+    text-align: end;
+    margin: 1em;
+    background-color:  rgba(157, 157, 157, 0.13);
+    padding: 1em;
+}
+/*LINKS NORMAL*/
+a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 0.7em;
+    font-weight: 700;
+}
+/* LINKS MOUSE OVER */
+a:hover {
+    color: rgb(179, 185, 190);
+}
+/*HELLO STYLE*/
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: white;
+    font-size: 6.9vw;
+    letter-spacing: -3.5px;
+    line-height: 0.9em;
+    opacity: 0.9;
+}
+p {
+    font-family: 'Rokkitt', serif;    
+    font-weight: 200;
+    font-size: 20px;
+    display: inline;
+    line-height: 1.5em;
+    color: white;
+}  
+.button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 4px;
+    cursor: pointer;
+    opacity: 0.9;
+    border: 1px solid;
+  }
+
+
+/*MEDIA QUERIES*/
+@media only screen and (min-width: 1500px) {
+    p {
+        font-size: 26px;
+        line-height: 1.5em;
+        } 
+    .button {
+        font-size: 1.5em;
+        }     
+    }
+
+@media only screen and (max-width: 1150px) {
+/*LINKS*/
+    .grid-item-1 {
+        grid-column: 1/9;
+        z-index: 10;
+    }
+/*IMAGE*/
+    .grid-item-2 {
+        grid-column: 1/6;
+        grid-row: 1/9;
+    }   
+/*HELLO*/
+    .grid-item-3 {
+        grid-column: 3/8;
+        grid-row: 2/7;
+        padding-right: 3em;
+        padding-top: 0;      
+
+    }
+    h1 {
+        font-size: 70px;
+        letter-spacing: -2.5px;
+        line-height: 1em;
+    }
+/*TEXT*/
+    .grid-item-4 {
+        grid-column: 2/9;
+        grid-row: 6/9;
+        background-color: transparent;
+
+    }
+    .grid-item-6 {
+        background-color:  transparent;
+        }
+
+
+}
+
+@media only screen and (max-width: 800px) {
+    .grid-item-2 {
+        grid-column: 1/9;
+        grid-row: 1/9;
+    }
+/*HELLO*/
+    .grid-item-3 {
+        grid-column: 3/9;
+        padding-right: 1em;  
+    }
+/*TEXT*/    
+    .grid-item-4 {
+        grid-column: 1/9;
+        margin: 0;   
+    }
+    h1 {
+        font-size: 65px;
+    }
+    .button, a {
+        color:  rgb(31, 245, 174);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+/*HELLO*/
+    .grid-item-3 {
+        grid-column: 2/9;
+        grid-row: 2/7; 
+    }
+    h1 {
+        font-size: 60px;
+    }  
+    .button {
+        padding: 5px 7px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1em;
+        font-weight: 800;
+        margin: 4px;
+    }
+    p {
+        line-height: 1.2em;
+    }  
+}

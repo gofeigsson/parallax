@@ -1,0 +1,146 @@
+/*incude padding and border in total dimensions, Roboto font selected, default m/p removed*/
+* { 
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+/*make images responsive*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+#wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 25% 17.5% 17.5% 40%;
+}
+/*left hand menu*/
+#logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 13px 0 0 20px;
+}
+/*left hand menu*/
+#navigation {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: 0 0 0 20px;
+}
+/*left hand menu*/
+#info {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    text-align: right;
+    margin: 0 0 0 20px;
+    color: black;
+}
+/*left hand menu*/
+#hours {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    grid-column: 1/2;
+    grid-row: 4/5;
+    text-align: right;
+    margin: 0 0 20px 20px;
+    color: black;
+}
+/*content main menu*/
+#content {
+    grid-column: 2/6;
+    grid-row: 1/5;
+    background-color: darkseagreen;
+    margin: 20px;
+}
+/*bootstrap edits*/
+.navbar {
+    text-align: right;
+    font-weight: 900;
+    font-size: 1.6em;
+    line-height: 0.75em;
+    margin-right:-10px;
+    padding: 0px;
+	z-index: 1;
+}
+#navigation {
+    display: flex;
+}
+.navbar-toggler {
+    margin: 10px;
+}
+/*active nav link color*/
+.navbar-light .navbar-nav .nav-link.active {
+    color :rgb(180, 248, 147);
+}
+#map {
+    width: 100%;
+    height: 100%;
+}
+/*RESPONSIVE*/
+@media only screen and (max-width: 767px) {
+    /*main div*/
+    #wrapper {
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-auto-rows: 20% 20% 20% 20% 20%;
+    }
+     #logo {
+    grid-column: 1/6;
+    grid-row: 1/2;
+    margin: 20px 0px px 20px;
+	max-width: 60%;
+	}
+    /*left hand menu*/
+    #navigation {
+        grid-column: 1/6;
+        grid-row: 1/2;
+        margin: 0px;
+    }
+    /*left hand menu*/
+    #info, #hours {
+        display: none;
+        }
+    /*content main menu*/
+    #content {
+        grid-column: 1/6;
+        grid-row: 2/6;
+    }
+    /*BOOTSTRAP*/
+    /*navbar adjustments*/
+            .navbar {
+            margin: 30px;
+            width: 125px;
+            }
+            #navpara {
+                background: rgba(255, 255, 255, 0.7);
+                padding: 5px;
+            } 
+            .navbar-toggler {
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
+            }
+            .navbar-toggler-icon {
+                width: 2em;
+                height: 2em;
+            }
+    }
+    @media only screen and (max-height: 450px) {
+        /*left hand menu*/
+    #info, #hours {
+        display: none;
+        }
+}
+
+
+

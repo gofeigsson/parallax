@@ -1,0 +1,120 @@
+/*REMOVE PADDING & SELECT ROBOTO*/
+body {
+  position: relative; /*bootstrap*/
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+  color:  rgb(20, 20, 20); 
+}
+/*IMAGES RESPONSIVE AND CORRECT ORIENTATION*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*WRAPPER DIMENSIONS*/
+#wrapper {
+  height: 100vh;
+  width: 100%;
+}
+#other /*DIV 6 OTHER WORK*/ {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  padding: 10vw;
+}
+/*IMAGE THUMBNAILS*/
+.myImg {
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0px 50px 50px 0px;
+  object-fit: contain; 
+  width: 100%;
+  max-width: 200px;
+}
+.myImg:hover {
+opacity: 0.5;
+}
+/*MODAL BACKGROUND*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  padding-top: 20px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(255,255,255); /* Fallback color */
+  background-color: rgba(255,255,255,0.9); /* White w/ opacity */
+}
+/*MODAL IMAGE*/
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 50%;
+  max-width: 600px;
+}
+/*ANIMATION*/
+.modal-content, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+/*CLOSE BUTTON*/
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: rgb(20, 20, 20); 
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.icons {
+  color: red;
+}
+
+/*PARAGRAPH TEXT*/
+p {
+  color: rgb(20, 20, 20); ;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+
+
+/* MODAL 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+      width: 95%;
+  }
+/*MODAL BACKGROUND*/
+.modal {
+ padding-top: 75px; /* Location of the box */
+}
+}
+
+
+  

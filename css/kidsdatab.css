@@ -1,0 +1,242 @@
+/*incude padding and border in total dimensions, Roboto font selected, default m/p removed*/
+body {
+  position: relative; /*bootstrap*/
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+/*make images responsive*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*set dimensions*/
+#wrapper {
+  height: 100vh;
+  width: 100%;
+}
+/*home page with logo grid item*/
+#one {
+  background-image: url(../images/kid21.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: 100vh;
+  width: 100%;
+}
+#logo {
+  width: 75%;
+  height: 75%;
+  grid-column: 7/8;
+  grid-row: 7/8;
+  background-image: url(../images/logopinkpar.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: center;
+  justify-self: center;
+}
+#clublogo {
+  width: 75%;
+  height: 75%;
+  grid-column: 1/8;
+  grid-row: 1/8;
+  background-image: url(../images/logokids.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: center;
+  justify-self: center;
+}
+/*whats on page with grid and flex*/
+#two {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  padding: 5vw 10vw;
+}
+.chapter {
+  font-family: 'Londrina Solid', cursive;  
+  font-size: 50px;
+  width: 100%;
+  padding-bottom: 5vw;
+}
+.infobox {
+  border: 1px solid;
+  max-width: 450px;
+  padding: 20px;
+  margin: 10px;
+  line-height: 0em;
+}
+/*first background image div*/
+#three {
+  background-image: url(../images/kid1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+}
+/*8 bit club with flex*/
+#four {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 20% 20% 20% 20% 20%;
+  padding: 5vw 10vw;
+}
+/*welcome screen blue div 1*/
+#pinkone {
+	grid-column: 1/4;
+  grid-row: 1/5;
+	background-color: rgba(233, 95, 250, 0.1);
+}
+/*welcome screen blue div 2*/
+#pinktwo {
+	grid-column: 3/6;
+  grid-row: 4/6;
+	background-color:rgba(233, 95, 250, 0.15);
+}
+.frames {
+  padding: 20px;
+  grid-column: 1/5;
+  grid-row: 1/6;
+}
+#snake {
+  width: 100%;
+  height: auto;
+}
+/*second background image div*/
+#five {
+  background-image: url(../images/kid3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+}
+/*sign up/admin div with grid*/
+#six {
+  display: flex;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 20% 20% 20% 20% 20%;
+  height: 100%;
+  width: 100%;
+  padding: 5vw 10vw;
+}
+#pinkthree {
+	grid-column: 1/4;
+  grid-row: 1/5;
+	background-color: rgba(233, 95, 250, 0.1);
+}
+/*welcome screen blue div 2*/
+#pinkfour {
+	grid-column: 2/6;
+  grid-row: 3/6;
+	background-color:rgba(233, 95, 250, 0.15);
+}
+#form {
+  width: 100%;
+  grid-column: 1/6;
+  grid-row: 2/6;
+}
+#admin {
+  width: 100%;
+}
+/*php image padding*/
+#imgpad {
+  padding-top: 20px;
+}
+/*various for navigation menu*/
+ul.nav-pills {
+  left: 0px;
+  top: 0px;
+  position: fixed;
+  width: 100%;
+}
+.nav-pills .nav-link.active {
+  background-color: rgb(233, 95, 250);  
+  border-radius: 0px;
+}
+.nav-pills .nav-link {
+  background-color: white;  
+  border-radius: 0px;
+}
+a {
+  color: black;
+  font-size: 25px;
+  font-family: 'Londrina Solid', cursive;
+  font-weight: 400;
+}
+.nav-item {
+  background-color:  white;
+}
+.nav {
+  background-color: white;
+}
+/*typography rules*/
+/*used in page chapters*/
+p {
+  line-height: 1.8em;
+}
+/*used in event title*/
+h3 {
+  font-weight: 900;
+}
+h4 {
+  font-weight: 900;
+}
+/*used in date*/
+h5 {
+  font-weight: 700;
+}
+/*used in category*/
+h6 {
+  font-weight: 300;
+}
+/*RESPONSIVE*/
+@media only screen and (max-width: 500px) {
+/*shrink navigation*/  
+  .nav-pills .nav-link.active {
+    padding: 5px;
+  }
+  .nav-pills .nav-link {
+    padding: 5px;
+  }
+  a {
+    font-size: 20px;
+  }
+  h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 40px;
+  }
+}
+/*RESPONSIVE*/
+@media only screen and (max-width: 1200px) {
+/*shrink event listings*/  
+  .infobox {
+    max-width: 400px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  /*add padding for healines*/  
+    .chapter {
+       padding-top: 5vw;
+    }
+  }
+  
